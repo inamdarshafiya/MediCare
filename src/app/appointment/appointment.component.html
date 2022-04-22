@@ -1,0 +1,32 @@
+
+<table class="table" style="font-size: 15px;">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Email</th>
+        <th scope="col">Doctor Name</th>
+        <th scope="col">Appointment Date</th>
+        <th scope="col">Time</th>
+        <th scope="col">Actions</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointment of appointement">
+        <th scope="row" ></th>
+        <td>{{appointment.name}}</td>
+        <td>{{appointment.number}}</td>
+        <td>{{appointment.email}}</td>
+        <td>{{appointment.doctorname}}</td>
+        <td>{{appointment.date}}</td>
+        <td>{{appointment.time}}</td>
+        <td><!--<i class="bi bi-pencil-fill" (click)="updateAppointment(appointment)"> </i>&nbsp;-->
+            <i class="bi bi-trash-fill" (click)="deleteAppointment(appointment.id)"></i></td>
+
+      </tr>
+
+    </tbody>
+  </table>
+
